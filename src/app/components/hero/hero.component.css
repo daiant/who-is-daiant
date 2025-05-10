@@ -1,0 +1,80 @@
+.hero {
+  display: block;
+  position: relative;
+  height: 450px;
+}
+
+img {
+  display: block;
+  position: absolute;
+}
+
+.sun {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  height: 420px;
+}
+
+.person {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 900;
+}
+
+.raccoon {
+  top: 50%;
+  left: 65%;
+  transform: translate(-0%, -30%) rotate(-13deg);
+}
+
+.calathea {
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.saturn {
+  top: 80%;
+  left: 63%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.stars {
+  top: 20%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.computer {
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.sparkles {
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .calathea {
+    left: 15%;
+  }
+
+  .saturn {
+    display: none;
+  }
+
+  .computer {
+    left: 14%;
+  }
+
+  .stars {
+    left: 20%;
+    top: 15%;
+  }
+}

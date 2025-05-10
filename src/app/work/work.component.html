@@ -1,0 +1,33 @@
+@if (work) {
+<div class="main">
+  <div class="aside">
+    <img [src]="work.image" alt="" />
+    <div class="actions">
+      <a routerLink="/" class="button">Back to home</a>
+      <a [href]="work.href" target="_blank" class="button primary">Visit</a>
+    </div>
+  </div>
+  <div class="content">
+    <h1>{{work.title}}</h1>
+    @for(p of work.description; track p) {
+    @if(isImage(p)) {
+    <div class="media-wrapper">
+      <img [src]="p.href" [alt]="p.footer" />
+      <small><i>{{p.footer}}</i></small>
+    </div>
+    } @else {
+    <p>{{p}}</p>
+    }
+    }
+  </div>
+</div>
+
+<div class="related">
+  <h2>See Also</h2>
+  <div class="work-list">
+    @for(work of relatedWorks; track work.title) {
+    <app-work-item [work]="work" />
+    }
+  </div>
+</div>
+}

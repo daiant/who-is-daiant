@@ -1,0 +1,9 @@
+<div class="mask">
+  <div class="navbar-wrapper">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">Who is daiant</a>
+    @for(segment of routeSegments(); track segment) {
+    <span>/</span>
+    <a [routerLink]="['/', segment]" routerLinkActive="router-link-active">{{ segment }}</a>
+    }
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<main>
+  <div class="title">
+    <h1>Who is Daiant</h1>
+    <p>Hi, I'm Carlos, a Valencian fullstack engineer. You can find me at <a href="https://github.com"
+        target="_blank">Github</a> or at <a href="mailto:charli@dabest.com">charli&#64;dabest.com</a></p>
+    <p>Below you can find my latest work.</p>
+  </div>
+
+  <div class="hero">
+    <app-hero />
+  </div>
+</main>
+<div class="work-list">
+  @for (work of works; track work.title) {
+  <app-work-item [work]="work" />
+  }
+</div>
