@@ -38,7 +38,7 @@ export const WorkData: {
     href: 'https://www.luxcare.es',
     description: [
       'LuxCare se especializa en la venta de spas y jacuzzis para exteriores. Ofrecen una selección de spas de primera calidad, cuidadosamente seleccionados por su calidad, diseño y características innovadoras.',
-      { footer: '', href: '/luxcare/luxcare_vector.webp' },
+      { footer: '', href: 'luxcare/luxcare_vector.webp' },
       'Inspirada en la simplicidad del agua, la web ofrece una experiencia de usuario fluida y atractiva, con un diseño limpio y moderno que refleja la esencia de la marca.',
       {
         footer:
