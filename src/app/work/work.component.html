@@ -1,10 +1,16 @@
 @if (work) {
 <div class="main">
   <div class="aside">
-    <img [src]="work.image" alt="" />
+    <a [href]="work.href" target="_blank">
+      @if(work.image.includes('.mp4')) {
+      <video [src]="work.image" autoplay loop muted playsinline style="width: 100%; height: auto;"></video>
+      } @else {
+      <img [src]="work.image" alt="" />
+      }
+    </a>
     <div class="actions">
-      <a routerLink="/" class="button">Back to home</a>
-      <a [href]="work.href" target="_blank" class="button primary">Visit</a>
+      <a routerLink="/" class="button">Volver al inicio</a>
+      <a [href]="work.href" target="_blank" class="button primary">Visitar</a>
     </div>
   </div>
   <div class="content">
@@ -12,7 +18,7 @@
     @for(p of work.description; track p) {
     @if(isImage(p)) {
     <div class="media-wrapper">
-      <img [src]="p.href" [alt]="p.footer" />
+      <img [src]="p.href" [alt]="p.footer" style="width: 100%; height: auto;" />
       <small><i>{{p.footer}}</i></small>
     </div>
     } @else {
@@ -23,7 +29,7 @@
 </div>
 
 <div class="related">
-  <h2>See Also</h2>
+  <h2>Otros trabajos</h2>
   <div class="work-list">
     @for(work of relatedWorks; track work.title) {
     <app-work-item [work]="work" />
